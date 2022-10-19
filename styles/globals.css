@@ -1,7 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
+  background-color: #FBF8F1;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -24,3 +29,9 @@ a {
     background: black;
   }
 }
+
+.liste{
+  @apply md:mx-4 md:py-3 bg-red-500
+}
+
+
