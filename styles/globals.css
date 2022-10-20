@@ -30,6 +30,9 @@ a {
     border-radius: 50%;
     background-color: #ececea;
 }
+.liste > i{
+  @apply mx-3 flex items-center md:hidden 
+}
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -40,17 +43,17 @@ a {
     background: black;
   }
 }
-.nav-visible{
+/* .nav-visible{
   background-color: #333;
   border-bottom: 1px solid #f1f1f1;
-}
+} */
 
 .liste{
-  @apply md:mx-4 md:py-3 cursor-pointer md:hover:text-orag 
+  @apply md:mx-4 flex md:py-3 cursor-pointer md:hover:text-orag  focus:text-orag my-4 ml-5 sm:ml-5 sm:my-5
 }
 .bg-visible{
-  @apply dark:opacity-100 md:text-white md:bg-slate-900 md:shadow-lg md:shadow-slate-500/50 
-}
+  @apply dark:opacity-100 md:!bg-big dark:!bg-slate-900 dark:md:shadow-slate-500/40  md:shadow-lg md:shadow-slate-500/40 transition-all duration-300 ease-out
+} 
 
 
 

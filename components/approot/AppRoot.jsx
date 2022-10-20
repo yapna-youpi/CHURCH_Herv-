@@ -6,12 +6,14 @@ import Footer from '../../pages/home/footer/Footer'
 
 function AppRoot({ children }) {
 
-    const [soon, setSoon] = useState(false);
+    const [moon, setMoon] = useState(false);
 
     const colorTheme = () =>{
         let colorT = localStorage.getItem('theme')
         nightwind.toggle();
-        setSoon(!soon);
+        setMoon(!moon);
+        document.getElementById('banner').classList.toggle('banner')
+        document.getElementById('banner').classList.toggle('banner2')
         // if( colorT === 'light') {
         // }else{
         //     theme = colorT == 'dark' ? 'light' : 'dark'
@@ -21,7 +23,7 @@ function AppRoot({ children }) {
 
     return (
         <div className='black-bg' id='approot'>
-            <Header soon={soon} colorTheme={colorTheme}  />
+            <Header moon={moon} colorTheme={colorTheme}  />
             {children}
             <Footer />
         </div>
