@@ -20,7 +20,7 @@ function AppRoot({ children }) {
     }
 
     return (
-        <div className='black-bg '>
+        <div className='black-bg' id='approot'>
             <Header soon={soon} colorTheme={colorTheme}  />
             {children}
             <Footer />

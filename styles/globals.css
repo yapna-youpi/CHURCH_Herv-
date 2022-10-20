@@ -19,6 +19,17 @@ a {
 * {
   box-sizing: border-box;
 }
+.banner{
+  background-image: url('../components/images/bg_1.jpg');
+}
+.banner2{
+  background-image: url('../components/images/bg.jpg');
+}
+.ic:hover{
+    padding: 2px;
+    border-radius: 50%;
+    background-color: #ececea;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -29,9 +40,17 @@ a {
     background: black;
   }
 }
+.nav-visible{
+  background-color: #333;
+  border-bottom: 1px solid #f1f1f1;
+}
 
 .liste{
-  @apply md:mx-4 md:py-3 bg-red-500
+  @apply md:mx-4 md:py-3 cursor-pointer md:hover:text-orag 
 }
+.bg-visible{
+  @apply dark:opacity-100 md:text-white md:bg-slate-900 md:shadow-lg md:shadow-slate-500/50 
+}
+
 
 
