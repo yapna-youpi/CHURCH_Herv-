@@ -1,10 +1,13 @@
 import React,{useState} from 'react'
 import nightwind from "nightwind/helper"
 
-import Header from '../../pages/home/header/Header'
-import Footer from '../../pages/home/footer/Footer'
+import Header from '../header/Header'
+import Footer from '../footer/Footer'
+import Newsletter from './main/newsletter/Newsletter';
+import Testimonial from './main/testimonial/Testimonial';
+import Banner from './main/banner/Banner';
 
-function AppRoot({ children }) {
+function AppRoot() {
 
     const [moon, setMoon] = useState(false);
 
@@ -24,7 +27,11 @@ function AppRoot({ children }) {
     return (
         <div className='black-bg' id='approot'>
             <Header moon={moon} colorTheme={colorTheme}  />
-            {children}
+            <Banner />
+
+            <Testimonial />
+            <Newsletter />
+
             <Footer />
         </div>
     )

@@ -12,7 +12,7 @@ module.exports = {
         'blac': '#240C00',
         'maron': '#674F44',
         'transluce': '#7D7D7D',
-        'orag': '#C19220',
+        'orag': '#C19220',  
         'hardOrag': '#e1b12c',
         'softBlack': '#333',
           'softBlu': '#0C9BA8'

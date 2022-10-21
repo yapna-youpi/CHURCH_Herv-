@@ -34,6 +34,28 @@ a {
   @apply mx-3 flex items-center md:hidden 
 }
 
+/*  -- styling tesimonial --*/
+.testimonial-img{
+  background: url('../components/images/bg_5.jpg');
+  background-size: cover;
+}
+/*  -- end tesimonial --*/
+
+/* --init styling newsletter --*/
+.newsletter{
+  background: url('../components/images/bg.jpg');
+  z-index: 1;
+}
+.newsletter-policy{
+  display: table;
+  margin: 32px auto 0; 
+}
+.newsletter input[type=checkbox]{
+  border-color: #E3DBD9!important;
+}
+
+/* --end styling newsletter --*/
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -49,7 +71,7 @@ a {
 } */
 
 .liste{
-  @apply md:mx-4 flex md:py-3 cursor-pointer md:hover:text-orag  focus:text-orag my-4 ml-5 sm:ml-5 sm:my-5
+  @apply md:mx-4 flex md:py-3 cursor-pointer md:hover:text-orag md:hover:font-semibold  focus:text-orag my-4 ml-5 sm:ml-5 sm:my-5
 }
 .bg-visible{
   @apply dark:opacity-100 md:!bg-big dark:!bg-slate-900 dark:md:shadow-slate-500/40  md:shadow-lg md:shadow-slate-500/40 transition-all duration-300 ease-out
