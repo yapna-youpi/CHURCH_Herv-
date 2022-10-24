@@ -36,8 +36,7 @@ a {
 
 /*  -- styling tesimonial --*/
 .testimonial-img{
-  background: url('../components/images/bg_5.jpg');
-  background-size: cover;
+  /* background: url('../components/images/bg_5.jpg'); */
 }
 /*  -- end tesimonial --*/
 
