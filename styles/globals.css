@@ -75,6 +75,9 @@ a {
 .bg-visible{
   @apply dark:opacity-100 md:!bg-big dark:!bg-slate-900 dark:md:shadow-slate-500/40  md:shadow-lg md:shadow-slate-500/40 transition-all duration-300 ease-out
 } 
+.all1{
+  @apply px-4 py-5 
+}
 
 
 

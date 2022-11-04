@@ -6,6 +6,7 @@ import Footer from '../footer/Footer'
 import Newsletter from './main/newsletter/Newsletter';
 import Testimonial from './main/testimonial/Testimonial';
 import Banner from './main/banner/Banner';
+import Services from './main/services/Services';
 
 function AppRoot() {
 
@@ -29,6 +30,7 @@ function AppRoot() {
             <Header moon={moon} colorTheme={colorTheme}  />
             <Banner />
 
+            <Services />
             <Testimonial />
             <Newsletter />
 
