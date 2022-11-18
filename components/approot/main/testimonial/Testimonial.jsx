@@ -17,6 +17,16 @@ function Testimonial() {
               Laborum perferendis ipsa ea, 
               dicta omnis voluptatibus temporibus vero enim mitle.
             </p>
+            <p className='leading-10 w-10/12'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+              Iste, iure rerum labore neque quas magnam aliquam vero temporibus quaerat quibusdam. 
+              Laborum perferendis ipsa ea, 
+              dicta omnis voluptatibus temporibus vero enim mitle.
+            </p>
+            <p className='leading-10 w-10/12'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+              Iste, iure rerum labore neque quas magnam aliquam vero temporibus quaerat quibusdam. 
+              Laborum perferendis ipsa ea, 
+              dicta omnis voluptatibus temporibus vero enim mitle.
+            </p>
         </div>
     </div>
   )
