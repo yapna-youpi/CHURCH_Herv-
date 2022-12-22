@@ -52,6 +52,26 @@ a {
 .newsletter input[type=checkbox]{
   border-color: #E3DBD9!important;
 }
+/*-- styling login--*/
+.logine{
+  background-color: #f6efef;
+    height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
+}
+.buble{
+  -webkit-animation: wave 15s linear infinite;
+    animation: wave 15s linear infinite;
+    background-image: linear-gradient(to right top,#c31432,#240b36);
+    border: 1px solid #fff;
+    border-radius: 54% 46% 42% 58%/60% 58% 42% 40%;
+    content: "";
+    height: 40vw;
+    margin: 100px auto;
+    min-height: 550px;
+    min-width: 550px;
+    width: 40vw;
+}
 
 /* --end styling newsletter --*/
 

@@ -44,7 +44,7 @@ function Header({ moon, colorTheme, }) {
           </menu>
 
           <aside className="aside  my-10 mx-auto md:flex  md:my-0 md:mx-0 md:w-80 md:items-center ">
-            <div className="login my-3 text-center cursor-pointer md:mx-2"> Login </div>
+            <div className="login my-3 text-center cursor-pointer md:mx-2"><Link href="/login"><a> Login</a></Link></div>
             <div className="register my-3 text-center cursor-pointer md:mx-2"> Register </div>
             <button className='absolute top-7 right-16 sm:right-7 md:relative md:top-0 md:right-0 md:mx-4' onClick={()=>colorTheme()}>
                     {moon ?
