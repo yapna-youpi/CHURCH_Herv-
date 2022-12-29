@@ -52,6 +52,8 @@ a {
 .newsletter input[type=checkbox]{
   border-color: #E3DBD9!important;
 }
+/* --end styling newsletter --*/
+
 /*-- styling login--*/
 .buble{
   -webkit-animation: wave 15s linear infinite;
@@ -66,15 +68,72 @@ a {
     min-width: 550px;
     width: 40vw;
 }
-.blueBg{
-
+.blueBg{  
   width: 100%;
-  height: 100%;
+  height: 90%;
+  transform: translateY(5%);
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 5px 45px rgba(0, 0, 0, 0.15);
 }
-
-/* --end styling newsletter --*/
+.formBx{
+  height: 100%;
+  box-shadow:  0 5px 45px rgba(0, 0, 0, 0.25);
+  transition: 0.5s ease-in-out;
+  z-index: 3r;
+}
+.signin.activer{
+  background-color: #f43648;
+}
+.formBx.activer{
+  animation: loginanim 0.65s ease-in-out both;
+}
+.formBx.desactiver{
+  animation: removeloginanim 0.65s ease-in-out both;
+}
+.formGroup p{
+}
+.formGroup input{
+  margin-bottom: 20px;
+  width: 100%;
+}
+.formGroup input[type="text"],.formGroup input[type="password"]{
+  border: none;
+  border-bottom: 2px solid #e1b12c;
+  outline: none;
+  height: 40px;
+}
+.formGroup input[type="text"]:focus,.formGroup input[type="password"]:focus{
+  border-bottom: 2px solid #222222;
+}
+@keyframes loginanim{
+  0%{
+      transform: left(0%);
+      opacity: 0;
+      
+  }
+  50%{
+    transform: left(50%);
+    opacity: 0.50;
+  }
+  100%{
+      transform: translatex(100%);
+      /* left: 50%; */
+      opacity: 1;
+  }
+}
+@keyframes removeloginanim{
+  0%{
+    transform: translatex(100%);
+  }
+  50%{
+    transform: left(50%);
+    opacity: 0.50;
+  }
+  100%{
+      transform: left(0%);
+      opacity: 1;
+  }
+}
 
 @media (prefers-color-scheme: dark) {
   html {
