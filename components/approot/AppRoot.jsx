@@ -26,7 +26,7 @@ function AppRoot() {
     }
 
     return (
-        <div className='black-bg' id='approot'>
+        <div className='black-bg ' id='approot'>
             <Header moon={moon} colorTheme={colorTheme}  />
             <Banner />
 

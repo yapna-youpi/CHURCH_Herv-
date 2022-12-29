@@ -6,8 +6,20 @@ function index() {
   return (
     <div>
       <Header/>
-        <div className="logine d-flex justify-center items-center">
-            <div className='bubble '>
+        <div className="flex justify-center items-center h-screen transition-all duration-500 bg-orange-300 ">
+            <div className="container relative w-6/12 h-96 flex ">
+              <div className="blueBg flex justify-center items-center absolute top-0 left-0 bg-orag">
+                <div className="box signin ">
+                  <h2 className=''>Already Have An Account ?</h2>
+                  <button className='signinBtn'>Sign In</button>
+                </div>
+                <div className="box signup ">
+                  <h2>Don't Have An Account ?</h2>
+                  <button className='signupBtn'>Sign Up</button>
+                </div>
+              </div>
+            </div>
+            {/* <div className='bubble '>
                 <div className='form-container'>
                     <form class="login-form">
                         <div class="icon">
@@ -21,7 +33,7 @@ function index() {
                         <button>Login</button>
                     </form>
                 </div>
-            </div>
+            </div> */}
         </div>
       <Footer />
     </div>
