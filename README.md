@@ -5,3 +5,4 @@ website CHURST for hervé
 when you will finish to download the zip code open your terminal and type yarn or npm install 
 then issue the command # npm run dev 
 to develop the project then issue the command npm run build
+it is the most particular technologie nextjs react with tailwind css with 
