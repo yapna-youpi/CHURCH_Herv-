@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react'
+
 import Header from '../../components/header/Header'
 import Footer from '../../components/footer/Footer'
+import { HiUserCircle } from 'react-icons/hi'
+import { RiLockPasswordFill } from 'react-icons/ri'
 
 function index() {
 
@@ -41,18 +44,38 @@ function index() {
                 </div>
               </div>
               <div className="formBx absolute top-0 lef-0 w-6/12 bg-white flex justify-center items-center"> 
-                <form action="">
-                  <div className="formGroup">
-                    <p className='m-0 p-0 font-bold'>Username</p>
-                    <input type="text" name="name" placeholder="Online" />
-                  </div>
-                  <div className="formGroup">
-                    <p className='m-0 p-0 font-bold'>Password</p>
-                    <input type="password" name="password" placeholder="......" />
-                    <input type="submit" name='submit' value="Singn In" />
-                  </div>
-                  <a href='#'>Forget Password</a>
-                </form>
+                <div className="signinFom">
+                  <form action="">
+                    <div className="formGroup">
+                      <p className='m-0 p-0 font-bold'>Username</p>
+                      <input type="text" name="name" placeholder="Online" /><i><HiUserCircle size={22} /></i>
+                    </div>
+                    <div className="formGroup">
+                      <p className='m-0 p-0 font-bold'>Password</p>
+                      <input type="password" name="password" placeholder="......" /><i><RiLockPasswordFill size={20} /></i>
+                      <input type="submit" name='submit' className='btnSingin' value="Singn In" />
+                    </div>
+                    <a href='#'>Forget Password</a>
+                  </form>
+                </div>
+                <div className="signupFom">
+                  <form action="">
+                    <div className="formGroup">
+                      <input type="text" name="name" placeholder="Username" /><i><HiUserCircle size={22} /></i>
+                    </div>
+                    <div className="formGroup">
+                      <input type="text" name="email" placeholder="Email" /><i><HiUserCircle size={22} /></i>
+                    </div>
+                    <div className="formGroup">
+                      <input type="number" name="phone" placeholder="phone" /><i><HiUserCircle size={22} /></i>
+                    </div>
+                    <div className="formGroup">
+                      <input type="password" name="password" placeholder="Password" /><i><RiLockPasswordFill size={20} /></i>
+                      <input type="submit" name='submit' className='btnRegister' value="Register" />
+                    </div>
+                    <a href='#'>Forget Password</a>
+                  </form>
+                </div>
               </div>
             </div>
             {/* <div className='bubble '>

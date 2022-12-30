@@ -80,6 +80,7 @@ a {
   box-shadow:  0 5px 45px rgba(0, 0, 0, 0.25);
   transition: 0.5s ease-in-out;
   z-index: 3r;
+  overflow: hidden;
 }
 .signin.activer{
   background-color: #f43648;
@@ -90,11 +91,45 @@ a {
 .formBx.desactiver{
   animation: removeloginanim 0.65s ease-in-out both;
 }
-.formGroup p{
+.formBx.activer .signupFom{
+  position: absolute;
+  left: 100%;
+  animation: paranim 0.45s ease-in-out 0.1s both;
+}
+.formBx.desactiver .signupFom{
+  position: absolute;
+  left: 0%;
+  animation: remanim 0.45s ease-in-out 0.1s both ;
+}
+.signinFom{
+  position: absolute;
+  left: 8%;
+}
+.signupFom{
+  position: absolute;
+  left: 110%;
+}
+.formBx.activer .signinFom{
+  position: absolute;
+  left: -90%;
+  animation: remanim 0.45s ease-in-out 0.1s both ;
+}
+.formBx.desactiver .signinFom{
+  position: absolute;
+  left: 100%;
+  animation: desanim 0.45s ease-in-out  both;
+}
+.formGroup i{
+  /* width: 10%; */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-18px,8px);
+  z-index: 2;
 }
 .formGroup input{
   margin-bottom: 20px;
-  width: 100%;
+  width: 92%;
 }
 .formGroup input[type="text"],.formGroup input[type="password"]{
   border: none;
@@ -103,35 +138,77 @@ a {
   height: 40px;
 }
 .formGroup input[type="text"]:focus,.formGroup input[type="password"]:focus{
-  border-bottom: 2px solid #222222;
+  border-bottom: 2px solid #262626;
+}
+.formGroup input[type="submit"]{
+  height: 40px;
+  margin-top: 20px;
+  color: #fff;
+  background: #262626;
+  cursor: pointer;
+}
+.formGroup input[type="submit"]:hover{
+  background: #161616;
+}
+.formBx.activer .btnSingin{
+  color: #c31432;
+}
+.formGroup a{
+  color: #262626;
+  font-size: 12px;
+  font-weight: bold;
+}
+.formBx.activer .formGroup input[type="text"],.formBx.activer .formGroup input[type="password"]{
+  border-bottom: 2px solid #c31432;
 }
 @keyframes loginanim{
   0%{
-      transform: left(0%);
+      left: 0%;
       opacity: 0;
       
   }
-  50%{
-    transform: left(50%);
-    opacity: 0.50;
-  }
   100%{
-      transform: translatex(100%);
-      /* left: 50%; */
+      left: 50%;
       opacity: 1;
   }
 }
 @keyframes removeloginanim{
   0%{
-    transform: translatex(100%);
-  }
-  50%{
-    transform: left(50%);
-    opacity: 0.50;
+    left: 50%;
+    opacity: 0;
   }
   100%{
-      transform: left(0%);
+      left: 0%;
       opacity: 1;
+  }
+}
+@keyframes remanim{
+  0%{
+    left: 0%;
+    opacity: 1;
+  }
+ 
+  100%{
+      left: -100%;
+      opacity: 1;
+  }
+}
+@keyframes desanim{
+  0%{
+    left: -100%;
+  }
+ 
+  100%{
+      left: 7.5%;
+  }
+}
+@keyframes paranim{
+  0%{
+    left: -100%;
+  }
+ 
+  100%{
+      left: 7.5%;
   }
 }
 
