@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -32,3 +33,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+=======
+# CHURCH_Herv-
+website CHURST for hervé 
+
+# this project is a web site made with nextjs 
+when you will finish to download the zip code open your terminal and type yarn or npm install 
+then issue the command # npm run dev 
+to develop the project then issue the command npm run build
+it is the most particular technologie nextjs react with tailwind css with 
+>>>>>>> 3921f37205495945eebc13f0995588d97a6ccfb8
