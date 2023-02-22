@@ -1,4 +1,5 @@
 import React,{useEffect, useState} from 'react'
+import nightwind from "nightwind/helper"
 import Link from "next/link"
 import { HiHome, HiShoppingCart } from 'react-icons/hi'
 import { BsCalendar2DateFill } from 'react-icons/bs'
@@ -23,11 +24,17 @@ function Header({ moon, colorTheme, }) {
         }, )
     }, [])
 
-  return (
-    <div className="hero">
-        <nav id='nav' className='z-10 w-full h-screen sm:border-r border-slate-400 md:border-r-0 sm:w-5/12 bg-big dark:bg-transparent md:bg-transparent  text-maron font-semibold md:dark:bg-transparent dark:transition-all dark:duration-300 dark:ease-out dark:text-white md:w-full md:flex md:h-20 md:items-center md:justify-around fixed'>
+    const handleMenu = () =>{
+      setShowIcon(!showIcon)
+      const nav = document.querySelector("#nav");
+      nav.classList.toggle('showMenu');
+    }
 
-          <div className="logo absolute top-7 left-7 z-10 md:top-0 md:relative md:left-0">
+  return (
+    <div className="hero absolute top-0 ">
+        <nav id='nav' className='w-full -left-full md:left-0 z-10  h-screen sm:border-r border-slate-400 md:border-r-0 sm:w-5/12 bg-big dark:bg-transparent md:bg-transparent  text-maron font-semibold md:dark:bg-transparent dark:transition-all dark:duration-300 dark:ease-out dark:text-white md:w-full md:flex md:h-20 md:items-center md:justify-around fixed'>
+
+          <div className="logo fixed top-7 left-7 z-10 md:top-0 md:relative md:left-0">
             {/* <Image src={logo} alt="logo church" /> */}
             logo
           </div>
@@ -45,8 +52,8 @@ function Header({ moon, colorTheme, }) {
 
           <aside className="aside  my-10 mx-auto md:flex  md:my-0 md:mx-0 md:w-80 md:items-center ">
             <div className="login my-3 text-center cursor-pointer md:mx-2"><Link href="/login"><a> Login</a></Link></div>
-            <div className="register my-3 text-center cursor-pointer md:mx-2"> Register </div>
-            <button className='absolute top-7 right-16 sm:right-7 md:relative md:top-0 md:right-0 md:mx-4' onClick={()=>colorTheme()}>
+            <div className="register my-3 text-center cursor-pointer md:mx-2"><Link href="/login"><a> Register</a></Link></div>
+            <button className='fixed top-7 right-16 sm:right-7 md:relative md:top-0 md:right-0 md:mx-4' onClick={()=>colorTheme()}>
                     {moon ?
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 dark:hover:rounded-xl dark:hover:bg-transluce dark:translate-y-1 md:dark:translate-y-0" viewBox="0 0 20 20" fill="currentColor">
                               <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
@@ -66,15 +73,15 @@ function Header({ moon, colorTheme, }) {
         </nav>
 
         { showIcon ?
-            <span onClick={() => setShowIcon(!showIcon)} className="bar text-black dark:text-white z-20 absolute top-7 right-7 md:hidden ">
-                    <svg  xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+            <span onClick={handleMenu} className="bar text-black dark:text-white  z-20 fixed top-7 right-7 md:hidden ">
+                    <svg xmlns="http://www.w3.org/2000/svg"  className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />;nh
                     </svg>
             </span>
                   : 
-            <span onClick={() => setShowIcon(!showIcon)} className="bar text-black dark:text-white  z-20 absolute top-7 right-7 md:hidden ">
-                    <svg xmlns="http://www.w3.org/2000/svg"  className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />;nh
+            <span onClick={handleMenu} className="bar text-black dark:text-white z-20 fixed top-7 right-7 md:hidden ">
+                    <svg  xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
                     </svg>
             </span>
         }

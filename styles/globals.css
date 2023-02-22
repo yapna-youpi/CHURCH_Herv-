@@ -34,6 +34,18 @@ a {
   @apply mx-3 flex items-center md:hidden 
 }
 
+.showMenu{
+  animation: trueMenu 0.5s ease-in-out both;
+}
+@keyframes trueMenu{
+  0%{
+    left: -100%;
+  }
+  100%{
+    left: 0;
+  }
+}
+
 /*  -- styling tesimonial --*/
 .testimonial-img{
   /* background: url('../components/images/bg_5.jpg'); */
@@ -158,7 +170,7 @@ a {
   font-size: 12px;
   font-weight: bold;
 }
-.formBx.activer .formGroup input[type="text"],.formBx.activer .formGroup input[type="password"]{
+.formBx.activer .formGroup input[type="text"],.formBx.activer .formGroup input[type="password"],.formBx.activer .formGroup input[type="password"]{
   border-bottom: 2px solid #c31432;
 }
 @keyframes loginanim{
@@ -212,6 +224,30 @@ a {
   }
 }
 
+@media only screen and (max-width: 991px){
+  .container{
+    max-width: 400px;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .blueBg{
+    top: 0;
+    height: 100%;
+  }
+  .formBx{
+    width: 100%;
+    height: 500px;
+    top: 0;
+    box-shadow: none;
+  }
+  .blueBg .box{
+    position: absolute;
+    width: 100%;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -243,6 +279,9 @@ a {
 }
 .box button{
   @apply cursor-pointer bg-white text-softBlack text-base font-medium border-0 py-2 px-3 
+}
+.colap{
+  @apply w-11/12 text-center pt-10 mx-auto sm:w-auto
 }
 
 

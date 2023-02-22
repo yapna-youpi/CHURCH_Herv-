@@ -16,7 +16,7 @@ function Newsletter() {
             </div>
             <div className="form ">
                 <form action="post">
-                    <div className="form-group bg-white flex items-center py-3 pl-4  shadow-dark-400/40">
+                    <div className="form-group bg-white flex items-center py-3 pl-4   shadow-dark-400/40">
                         <input className='border-r w-8/12 outline-0' type="text" placeholder='Enter Your Email Address' />
                         <button type='submit' className='w-4/12 ml-3 flex items-center font-semibold hover:text-hardOrag hover:duration-500'><i className='mx-2'><FaTelegramPlane/> </i> SUBSCRIBE</button>
                     </div>

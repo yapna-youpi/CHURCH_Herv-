@@ -16,7 +16,8 @@ module.exports = {
         'hardOrag': '#e1b12c',
         'softBlack': '#333',
         'softBlu': '#0C9BA8',
-        'berg': '#f6efef'
+        'berg': '#f6efef',
+        'orenge': "#F8F5EB"
       }
     },
   },

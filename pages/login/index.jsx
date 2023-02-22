@@ -1,15 +1,22 @@
-import React, { useEffect } from 'react'
+import React, { useState } from 'react'
 
 import Header from '../../components/header/Header'
 import Footer from '../../components/footer/Footer'
 import { HiUserCircle } from 'react-icons/hi'
+import { GrMail } from 'react-icons/gr'
 import { RiLockPasswordFill } from 'react-icons/ri'
 
 function index() {
 
-  useEffect(()=>{
+    const [moon, setMoon] = useState(false);
 
-  },[])
+    const colorTheme = () =>{
+        let colorT = localStorage.getItem('theme')
+        nightwind.toggle();
+        setMoon(!moon);
+        document.getElementById('banner').classList.toggle('banner')
+        document.getElementById('banner').classList.toggle('banner2')
+    }
 
   
   const handleSignin = function () {
@@ -30,8 +37,8 @@ function index() {
   }
   return (
     <div>
-      <Header/>
-        <div className="signin flex justify-center items-center h-screen transition-all duration-500 bg-orange-300 ">
+      <Header moon={moon} colorTheme={colorTheme} />
+        <div className="signin flex justify-center pt-16 items-center h-screen transition-all duration-500 bg-orange-300 ">
             <div className="container  relative w-6/12 h-96 flex">
               <div className="blueBg flex justify-center items-center absolute top-0 left-0 bg-orag">
                 <div className="box signin ">
@@ -64,10 +71,10 @@ function index() {
                       <input type="text" name="name" placeholder="Username" /><i><HiUserCircle size={22} /></i>
                     </div>
                     <div className="formGroup">
-                      <input type="text" name="email" placeholder="Email" /><i><HiUserCircle size={22} /></i>
+                      <input type="text" name="email" placeholder="Email" /><i><GrMail size={18} /></i>
                     </div>
                     <div className="formGroup">
-                      <input type="number" name="phone" placeholder="phone" /><i><HiUserCircle size={22} /></i>
+                      <input type="number" name="phone" placeholder="phone" /><i><HiUserCircle size={20} /></i>
                     </div>
                     <div className="formGroup">
                       <input type="password" name="password" placeholder="Password" /><i><RiLockPasswordFill size={20} /></i>

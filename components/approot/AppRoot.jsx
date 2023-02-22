@@ -18,12 +18,12 @@ function AppRoot() {
         setMoon(!moon);
         document.getElementById('banner').classList.toggle('banner')
         document.getElementById('banner').classList.toggle('banner2')
-        // if( colorT === 'light') {
-        // }else{
-        //     theme = colorT == 'dark' ? 'light' : 'dark'
-        //     localStorage.setItem('theme', `${theme}`)
-        // }
     }
+    // if( colorT === 'light') {
+    // }else{
+    //     theme = colorT == 'dark' ? 'light' : 'dark'
+    //     localStorage.setItem('theme', `${theme}`)
+    // }
 
     return (
         <div className='black-bg ' id='approot'>
